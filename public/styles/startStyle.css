@@ -1,0 +1,1425 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('/Roboto-Light.ttf');
+    font-weight: 600;
+    font-style:bold;
+}
+
+:root {
+  --main-title-color: rgb(63,81,181);
+}
+body {margin:0;
+      font-family: 'Roboto', sans-serif;}
+
+.sliderImage {
+    width:100%;
+    height:300px; 
+}
+
+.toast {
+    position: fixed;
+    width: 50vw;
+    height: 20vw;
+    background-color: green;
+    color:white;
+}
+
+.center {
+    text-align: center;
+    
+}
+
+ul.topnav {
+  z-index: 60;
+  height: 56px;
+  width: 100vw;
+  position: fixed;
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+/*  background-color: var(--main-title-color);*/
+    -webkit-box-shadow: 2px 3px 13px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 3px 13px 1px rgba(0,0,0,0.75);
+    box-shadow: 2px 3px 13px 1px rgba(0,0,0,0.75);
+    background: rgba(47,18,161,1);
+    background: linear-gradient(111deg, #2f12a1, #e84b7f);
+    background-size: 200% 200%;
+    -webkit-animation: blend 7s ease infinite;
+    -moz-animation: blend 7s ease infinite;
+    animation: blend 7s ease infinite;
+}
+@-webkit-keyframes blend {
+    0%{background-position:11% 0%}
+    50%{background-position:90% 100%}
+    100%{background-position:11% 0%}
+}
+@-moz-keyframes blend {
+    0%{background-position:11% 0%}
+    50%{background-position:90% 100%}
+    100%{background-position:11% 0%}
+}
+@keyframes blend { 
+    0%{background-position:11% 0%}
+    50%{background-position:90% 100%}
+    100%{background-position:11% 0%}
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+ul.topnav li a:hover {background-color: #555;}
+ul.topnav li a:focus {background-color: #555;}
+
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+ .topRightIcon
+    {display: none !important;}
+    .centerLogo {
+        display: block;
+    }
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+
+.mainMenuIcon {
+    display: inline-block;
+    cursor: pointer;
+    transform: scale(.7);
+    margin-top: -4px;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+
+
+/* The side navigation menu */
+.sidenav {
+    height: 100vh; /* 100% Full-height */
+    width: 0px; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 56px;
+    left: 0;
+    background-color: whitesmoke;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    -webkit-box-shadow: 5px 1px 15px -2px rgba(0,0,0,0.75);
+-moz-box-shadow: 5px 1px 15px -2px rgba(0,0,0,0.75);
+box-shadow: 5px 1px 15px -2px rgba(0,0,0,0.75);
+}
+
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: darkslategray;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 71;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.sidenav.open  {
+    width: 250px !important;
+}
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    z-index: 61;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+/*    background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgb(61, 118, 181)), to(rgb(176, 88, 148)));*/
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 700px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    margin-top: -9px;
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: ease-in .3s;
+    padding:0px 9px;
+}
+
+.close:hover,
+.close:focus {
+    transform: rotate(360deg);
+    color: lightgray;
+    text-decoration: none;
+    cursor: pointer;
+  -webkit-transform: rotate(360deg);
+          
+}
+
+.modal-header {
+    padding: 14px 16px;
+    padding-left: 43px;
+    /*  background-color: var(--main-title-color);*/
+    -webkit-box-shadow: 2px 3px 13px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 3px 13px 1px rgba(0,0,0,0.75);
+    box-shadow: 2px 3px 13px 1px rgba(0,0,0,0.75);
+    background: rgba(47,18,161,1);
+    background: linear-gradient(111deg, #2f12a1, #e84b7f);
+    background-size: 200% 200%;
+    -webkit-animation: blend 7s ease infinite;
+    -moz-animation: blend 7s ease infinite;
+    animation: blend 7s ease infinite;
+    color: white;
+    text-align: center;
+    font-size: 16px !important;
+    transition: ease-in .3s;
+}
+.modal-header:hover{
+/*    font-size: 19px !important;*/
+}
+
+.modal-body {
+            width:80%;
+        margin-right: 10%;
+            margin-left: 10%;
+            margin-top: 40px;
+            margin-bottom: 30px;}
+
+.modal-footer {
+    padding: 9px 16px;
+    background-color: lightgray;
+    color: white;
+    text-align: center;
+}
+
+
+
+
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    
+}
+
+.midSizeTab {
+    
+}
+
+/* Style the links inside the tab */
+.tablinks {
+    margin-bottom: 38px;
+    float: left;
+    display: block;
+    color: darkslategrey;
+    text-align: center;
+    padding: 8px 0px;
+    text-decoration: none;
+    transition: 0.2s ease-in;
+    font-size: 17px;
+    width: 33%;
+    border-bottom: 3px solid transparent;
+    font-weight: 300;
+    opacity: .9;
+    
+}
+
+/* Change background color of links on hover */
+div.tab a:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tablinks:focus, .tablinks:active, .tablinks.active{
+    background-color: rgba(204, 204, 204, 0.32);
+    border-bottom: 3px solid var(--main-title-color);
+    font-weight: 600;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    border-top: none;
+    text-align: center;
+    transition: ease-in .3s;
+    height: auto;
+    min-height: 400px;
+}
+.tabcConactive {
+    display: block !important;
+}
+
+.tabContainer {
+    width: 50vw;
+    margin-left: 25vw;
+    margin-right: 25vw;
+    margin-top: 34px;
+    height: 55px;
+}
+
+.bgTitleImg {
+    margin-top: 70px;
+    width:100vw;
+    height: 17em;
+}
+.centerLogo {
+    text-align: center;
+    position: absolute;
+    width: 180px;
+    color: white;
+    top: 21px;
+    margin-left: calc(50vw - 91px);
+}
+.rightNav {
+    float: right;
+    right: 20px;
+    color: white;
+    position: absolute;
+    top: 15px;
+    border: 1px solid wheat;
+    border-radius: 25px;
+    padding: 3px 8px;
+    transition: ease-in-out .5s;
+    font-size: 17px;
+}
+
+.rightNav:hover {
+    transform: rotate(360deg);
+    cursor: pointer;
+  -webkit-transform: rotate(360deg);
+}
+
+
+
+
+/*Slide show*/
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  margin-top: 55px;
+  width:100vw;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -194px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.sliderText {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: right;
+  right: 10px;
+  cursor: pointer;
+}
+.sliderText:hover {
+    color:dodgerblue;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/*.ink styles - the elements which will create the ripple effect. The size and position of these elements will be set by the JS code. Initially these elements will be scaled down to 0% and later animated to large fading circles on user click.*/
+.ink {
+	display: block; position: absolute;
+	background: hsl(180, 40%, 80%);
+	border-radius: 100%;
+	transform: scale(0);
+}
+/*animation effect*/
+.ink.animate {animation: ripple 0.65s linear;}
+@keyframes ripple {
+	/*scale the element to 250% to safely cover the entire link and fade it out*/
+	100% {opacity: 0; transform: scale(2.5);}
+}
+
+
+
+.speedContainer {
+    left: 0;
+    right:0;
+    width: 80vw;
+    position: absolute;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+.speed {
+    cursor: pointer;
+    float: left;
+    display: inline-block;
+    text-align: center;
+    width: 20vw;
+    min-height: 200px;
+    
+}
+.speed:hover, .speed:focus {
+    -webkit-box-shadow: 3px 0px 33px 7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 0px 33px 7px rgba(0,0,0,0.75);
+    box-shadow: 3px 0px 33px 7px rgba(0,0,0,0.75);
+
+}
+@media screen and (max-width: 950px) {
+.speed {
+    float: left;
+    display: inline-block;
+    text-align: center;
+    width: 40vw;
+    min-height: 200px;
+}
+.tabContainer {
+    width: 70vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    margin-top: 34px;
+    height: 55px;
+}
+.tabcontent {
+    display: none;
+    padding: 6px 0px;
+    border-top: none;
+    text-align: center;
+    transition: ease-in .3s;
+    height: auto;
+    min-height: 800px;
+}
+#TYPE {
+        min-height: 400px;
+    }
+}
+@media screen and (max-width: 450px) {
+.tabContainer {
+    width: 90vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 34px;
+    height: 55px;
+}
+.speedContainer {
+    left: 0;
+    right:0;
+    width: 90vw;
+    position: absolute;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+.speed {
+    float: left;
+    display: inline-block;
+    text-align: center;
+    width: 45vw;
+    min-height: 200px;
+}
+}
+@media screen and (max-width: 330px) {
+    .tablinks{
+        font-size: 15px;
+    }
+}
+.topRightIcon {
+/*    border:1px solid white;*/
+    border-radius: 50px;
+    height: 35px;
+    width: 35px;
+    float: right !important;
+    display: inline-block;
+    transition: ease-in .2s;
+}
+.currentSpeed{
+    margin-right: -5px;
+    margin-top: 11px;
+}
+.resetIcon {
+    margin-right: 69px;
+    margin-top: 11px;
+    margin-left: -4px;
+    z-index: 3;
+    cursor: pointer;
+    opacity: 0;
+}
+.currentType {
+    margin-top: 11px;
+}
+.currentSpeedImg, .currentTypeImg {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+
+.insantSpeedImg, .sameDaySpeedImg, .sameWeekSpeedImg, .anyTimeSpeedImg {
+    width: 80%;
+    height: 80%;
+    padding: 10%;
+    
+}
+.insantSpeedImg {
+    height: 200px;
+    background: url(/images/rocketGeo3.png) no-repeat center center;
+    background-size: 60%;
+    transition: ease-in .4s;
+}
+.instantSpeed:hover .insantSpeedImg, .instantSpeed:focus .insantSpeedImg {
+    height: 200px;
+    background: url(/images/instantSpeed.png) no-repeat center center;
+    background-size: 60%;
+}
+.instantSpeedMobileClick {
+    height: 200px;
+    background: url(/images/instantSpeed.png) no-repeat center center;
+    background-size: 60%;
+}
+.sameDaySpeedImg {
+    height: 200px;
+    background: url(/images/cheetahgeo2.png) no-repeat center center;
+    background-size: 60%;
+    transition: ease-in .4s;
+}
+.sameDaySpeed:hover .sameDaySpeedImg, .sameDaySpeed:focus .sameDaySpeedImg {
+    height: 200px;
+    background: url(/images/sameDaySpeed.png) no-repeat center center;
+    background-size: 60%; 
+}
+.sameDaySpeedMobileClick {
+     height: 200px;
+    background: url(/images/sameDaySpeed.png) no-repeat center center;
+    background-size: 60%; 
+}
+.sameWeekSpeedImg {
+    height: 200px;
+    background: url(/images/horseGeo2.png) no-repeat center center;
+    background-size: 60%;
+    transition: ease-in .4s;
+}
+.sameWeekSpeed:hover .sameWeekSpeedImg, .sameWeekSpeed:focus .sameWeekSpeedImg {
+    height: 200px;
+    background: url(/images/sameWeekSpeed.png) no-repeat center center;
+    background-size: 60%; 
+}
+.sameWeekSpeedMobileClick {
+    height: 200px;
+    background: url(/images/sameWeekSpeed.png) no-repeat center center;
+    background-size: 60%; 
+}
+.anyTimeSpeedImg {
+    height: 200px;
+    background: url(/images/camelGeo2.png) no-repeat center center;
+    background-size: 60%;
+    transition: ease-in .4s;
+}
+.anyTimeSpeed:hover .anyTimeSpeedImg, .anyTimeSpeed:focus .anyTimeSpeedImg {
+    height: 200px;
+    background: url(/images/anyTimeSpeed.png) no-repeat center center;
+    background-size: 60%; 
+}
+.anyTimeSpeedMobileClick {
+    height: 200px;
+    background: url(/images/anyTimeSpeed.png) no-repeat center center;
+    background-size: 60%; 
+}
+.infoSpeedText {
+    font-size: 13px;
+    color:darkslategray;
+}
+
+
+.categoryList {
+    display: inline-block;
+    padding-left: 0px;
+    width: 70vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+.category {
+    cursor: pointer;
+    margin: 27px;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: aqua;
+    display: inline-block;
+    transition: ease-in .2s;
+}
+.category:hover, .category:focus, .category.active {
+    transform: scale(1.3);
+    -webkit-box-shadow: 0px -1px 28px 3px rgba(145,140,145,1);
+-moz-box-shadow: 0px -1px 28px 3px rgba(145,140,145,1);
+box-shadow: 0px -1px 28px 3px rgba(145,140,145,1);
+}
+.hotFood {
+    background:  linear-gradient(to bottom right,#f46642 40%,#9c2202 140%);
+}
+.electronics {
+    background: linear-gradient(-220deg,#578bd3 23%,#3f6e97);
+}
+.meller {
+    background: linear-gradient(111deg, #c0efe2, #149486);
+    background-size: 200% 200%;
+    -webkit-animation: blend 7s ease infinite;
+    -moz-animation: blend 7s ease infinite;
+    animation: blend 7s ease infinite;
+}
+.grocery {
+    background: radial-gradient(circle at 100px 100px, #84e499, rgb(22, 86, 11));
+}
+.postal {
+    background: linear-gradient(-180deg,#f0db4f,#edd223);
+}
+.zara {
+    background: linear-gradient(111deg, #d4da9f, #889e9c);
+    background-size: 200% 200%;
+    -webkit-animation: blend 7s ease infinite;
+    -moz-animation: blend 7s ease infinite;
+    animation: blend 7s ease infinite;
+}
+.mango, .ubereats {
+        background: linear-gradient(111deg, #9bcabd, #3c3839);
+    background-size: 200% 200%;
+    -webkit-animation: blend 7s ease infinite;
+    -moz-animation: blend 7s ease infinite;
+    animation: blend 7s ease infinite;
+}
+.fashion {
+    background: linear-gradient(-220deg,#68217a 23%,#9b62a9);
+}
+.drinks {
+    background: linear-gradient(-220deg,#5dcdd5 23%,#1abbe5);
+}
+.bershka, .netaporter {
+    background: linear-gradient(111deg, #7e7d82, #ec2064);
+    background-size: 200% 200%;
+    -webkit-animation: blend 7s ease infinite;
+    -moz-animation: blend 7s ease infinite;
+    animation: blend 7s ease infinite;
+}
+.asos {
+    background: linear-gradient(-220deg,rgba(6, 6, 6, 0.8) 44%,#ecece8);
+}
+.henchman {
+    background: linear-gradient(111deg, #141417, #ec2064);
+    background-size: 200% 200%;
+    -webkit-animation: blend 7s ease infinite;
+    -moz-animation: blend 7s ease infinite;
+    animation: blend 7s ease infinite;
+}
+.ups {
+background: linear-gradient(-220deg,#583229 23%,#bb81a6);
+}
+.amazon{
+background: linear-gradient(-220deg,#eae93d 23%,#f3b323);
+}
+.shutl {
+   background: linear-gradient(111deg, #deb4bd, #3c3839);
+    background-size: 200% 200%;
+    -webkit-animation: blend 7s ease infinite;
+    -moz-animation: blend 7s ease infinite;
+    animation: blend 7s ease infinite;
+}
+.mysuishishop {
+        background: linear-gradient(-220deg,rgba(37, 36, 36, 0.8) 23%,#d9daba);
+
+}
+.amazonfresh {
+     background: linear-gradient(-220deg,#f2f2f2 74%,#9ec595);
+}
+.morrissons {
+    background: linear-gradient(111deg, #49655d, #0dbdaa);
+}
+.maplin {
+    background: linear-gradient(-220deg,#2ca3dc 23%,#ead9b1);
+}
+.mediaMrkt, .hungryhouse{
+     background: linear-gradient(-220deg,#df0000 23%,#bb81a6)
+}
+.deliberry, .henchman {
+    background: linear-gradient(-220deg,#e03e4b 53%,#79d33a);
+}
+.glovo {
+    background:linear-gradient(-220deg,#4c9f8a 53%,#fede66);
+}
+.lavalocker, .laundrapp {
+    background: linear-gradient(-220deg,#00a1ef 53%,#436aa0);
+}
+.ulabox {
+background: linear-gradient(-220deg,#ec276d 23%,#bb81a6);
+}
+.pixmania {
+background: linear-gradient(-220deg,#d6188c 23%,rgba(232, 75, 127, 0.46));
+}
+.fnac {
+background: linear-gradient(-220deg,#e7ad0f 23%,#f3b323);
+}
+.elcorte, .asda {
+background: linear-gradient(-220deg,#1a8b49 23%,rgba(221, 243, 35, 0.78));
+}
+.carrefour, .tesco {
+background: linear-gradient(-220deg,#ddd 50%,rgba(145,140,145,1));
+}
+.alcampo, .henchman {
+background: linear-gradient(-220deg,#e84b4b 8%,#f3238d);
+}
+.jinn {
+background: linear-gradient(-220deg,#26a8eb 23%,#2f12a1);
+}
+.justEat {
+background: linear-gradient(-220deg,#ea3d6a 23%,#f37923);
+}
+.deliveroo {
+background: linear-gradient(-220deg,#00cdbe 23%,rgba(35, 243, 224, 0.84));
+}
+.dia, .quipup {
+background: linear-gradient(-220deg,#d0314e 23%,rgba(35, 243, 224, 0.84));
+}
+.dhl {
+    background: linear-gradient(-220deg,#fdcb2e 23%,rgba(243, 237, 35, 0.84)); 
+}
+.aravinc, .onedelivery {
+    background: linear-gradient(-220deg,#e8554b 23%,#c04848); 
+}
+.farfetch {
+    background: linear-gradient(-220deg,rgba(37, 36, 36, 0.8) 23%,#ea3d6a);
+}
+.restoIn {
+background:linear-gradient(-220deg,#ef7e8a 42%,#f74cd2);
+}
+.telepizza, .papajohns {
+background: linear-gradient(-220deg,#ea92a9 23%,#f32340);
+}
+.dominos {
+background: linear-gradient(-220deg,whitesmoke 23%,#ccc);
+}
+.deliverum, .sainsburys {
+    background: linear-gradient(-220deg,#fba509 23%,#fede66); 
+}
+.burgerKing, .amazonfresh {
+    background:linear-gradient(-220deg,#f2f2f2 74%,#dcabab);
+}
+.logoCat{
+    width: 74%;
+    height: 74%;
+    padding-top: 10px;
+}
+.logoService {
+    width: 65%;
+    height: 65%;
+    padding-top: 15px;
+}
+.serviceList {
+    margin-top: 43px;
+    left: 0px;
+    display: inline-block;
+    padding-left: 0px;
+    width: 70vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    margin-bottom: 86px;
+    transition: ease-in-out .7s;
+}
+.service, .serviceBlog {
+    cursor: pointer;
+    margin: 27px;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: aqua;
+    display: inline-block;
+    transition: ease-in-out .7s;
+}
+.service:hover, .service:focus , .serviceBlog:hover, .serviceBlog:focus{
+    transform: scale(1.3);
+    -webkit-box-shadow: 0px -1px 28px 3px rgba(145,140,145,1);
+-moz-box-shadow: 0px -1px 28px 3px rgba(145,140,145,1);
+box-shadow: 0px -1px 28px 3px rgba(145,140,145,1);
+}
+.clickMobOptionCompany {
+transform: scale(1.0) translateX(-94px) translateZ(10px) !important;
+}
+.footer {
+    margin-top: 125px;
+    height: 150px;
+    position: relative;
+    
+}
+.footerTop {
+    font-weight: 100;
+    color: white;
+    padding: 14px 5px 5px 10px;
+    height: 70px;
+    background: #424242 !important;
+    font-size: 14px;
+}
+.notes {
+   display: block;
+   text-align: center;
+}
+.footerBottom {
+    text-align: center;
+    height: 150px;
+    background-color: #212121 !important;
+}
+.headerText {
+    position: absolute;
+    margin-top:  120px;
+    text-align: center;
+    width: 70vw;
+    font-weight: 800;
+    color:white;
+    margin-left: 15vw;
+    opacity: 1;
+    z-index: 4;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
+.headerDiv {
+    display: block;
+    background-color: darkslategray;
+    opacity: 0.9;
+    height: 299px;
+    width: 100vw;
+    position: absolute;
+    transition: ease-in .2s;
+    animation: fadeOutText;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-duration: 2.7s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeOutText { 
+    0%{opacity:.8}
+    40%{opacity:.7}
+    80%{opacity:.6}
+    100%{opacity:0;
+    display: none !important;
+    visibility: hidden}
+}
+
+
+
+
+
+
+.categorytip, .servicetip{
+    position: relative;
+    display: inline-block;
+    border-bottom: 0px dotted transparent;
+}
+
+.categorytip .tooltiptext, .servicetip .tooltiptext {
+    visibility: hidden;
+    min-width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 16px;
+    padding: 4px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+    font-size: .8em;
+}
+
+.categorytip .tooltiptext::after, .servicetip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.categorytip:hover .tooltiptext , servicetip:hover .tooltiptext{
+    visibility: visible;
+    opacity: 1;
+}
+
+.termsConditions {
+    margin-top: 130px;
+    line-height: 27px;
+    font-size: 12px !important;
+}
+
+
+
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+.submitModal {
+    margin-left: 15%;
+    width: 72%;
+    background-color: white;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 4px 8px;
+    border: 1px solid white;
+    /* margin: 10px; */
+    cursor: pointer;
+    font-weight: 100;
+    transition: ease-in .3s;
+    outline: lightgray solid 2px;
+    height: 47px;
+    background-color: dodgerblue;
+}
+.submitModal:hover, .submitModal:focus {
+    color: white;
+    font-weight: 600;
+    outline: lightgray solid 2px;
+    text-shadow: 5px 2px 4px rgba(156, 204, 148, 1);
+}
+
+.socialIcon {
+    cursor: pointer;
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    margin: 5px;
+    margin-top: 30px;
+}
+
+
+input:focus, textarea:focus, keygen:focus, select:focus {
+	outline: none;
+}
+::-moz-placeholder {
+	color: #666;
+	font-weight: 300;
+	opacity: 1;
+}
+
+::-webkit-input-placeholder {
+	color: #666;
+	font-weight: 300;
+}
+
+.form-fields {
+    padding: 4px;
+    border-radius: 4px;
+    display: block;
+    border: 3px solid lightgray;
+    line-height: 30px;
+    height: 37px;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    transition: .5s ease-in;
+}
+.form-fields:focus {
+    border-bottom-color: rgba(0, 128, 0, 0.46);
+    background-color: rgba(242, 242, 242, 0.84);
+}
+/*
+textarea {
+    margin-top: 7px;
+    width: 100%;
+    resize: none;
+    min-height: 60px;
+    overflow-y: scroll;
+    transition: .2s ease-in;
+    
+}
+*/
+
+textarea {
+    margin-top: 7px;
+    height: 110px;
+    width: 100%;
+    resize: none;
+    background-color: rgba(242, 242, 242, 0.94);
+}
+
+
+.submitModal span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  height: 20px;
+  width: 20px;
+  margin-left: -20px;
+    
+}
+
+.submitModal span:after {
+    content: url(/images/tickIcon.png);
+    position: absolute;
+    opacity: 0;
+    height: 20px;
+    width: 20px;
+    top: -16px;
+    right: -20px;
+    transform: scale(.4);
+    transition: 0.5s;
+}
+
+.submitModal:hover span {
+  padding-right: 57px;
+}
+
+.submitModal:hover span:after {
+  opacity: 1;
+  right: -10px;
+}
+.submitModal:focus span {
+  padding-right: 57px;
+}
+
+.submitModal:focus span:after {
+  opacity: 1;
+  right: -10px;
+}
+
+
+.submitModal.cancel span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  height: 20px;
+    width: 20px;
+}
+
+.submitModal.cancel span:after {
+  content: url(/images/closeIcon.png);
+  position: absolute;
+  opacity: 0;
+    height: 20px;
+    width: 20px;
+  top: -20px;
+  right: -20px;
+transform: scale(.5);
+  transition: 0.5s;
+}
+
+.submitModal.cancel:hover span {
+  padding-right: 57px;
+}
+
+.submitModal.cancel:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+
+.mainPage.opacity {
+    z-index: 61;
+    display: block;
+    -webkit-filter: blur(4px); /* Safari */
+    filter: blur(4px);
+}
+.mail {
+    position: absolute;
+    height: 35px;
+    width: 50px;
+    margin-left: 25px;
+    margin-top: -7px;
+}
+
+
+
+.chosen {
+    transition: ease-in-out .5s;
+    display: block;
+    transform: translateX(-94px) translateZ(10px);
+    margin-bottom: -47px;
+    z-index: 5;
+}
+
+.info {
+    display: none;
+    height: 74px;
+    border: 1px solid darkslategray;
+    width: 0vw;
+    transition: ease-in-out .5s;
+    opacity: 1;
+}
+
+
+
+
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate(100%, 0);
+    transform: translate(100%, 0);
+    visibility: visible;
+      
+  }
+
+  to {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, -43px) ;
+/*  z-index: -5;*/
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate(100%, 0);
+    transform: translate(100%, 0) ;
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, -43px);
+/*    z-index: -15;*/
+  }
+}
+
+
+.info.show{
+    opacity: 1;
+    position: absolute;
+    transition: ease-in-out .5s;
+    width: 80vw;
+        -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+      -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+    background-color: lightgray;
+}
+.title {background-color: white;
+        width: 25%;
+        height: 100%;
+    float: left;
+    line-height: 40px;
+}
+
+.titleBar {
+    display: none;
+     margin-top: 8px;
+    background-color: dimgrey;
+    position: absolute;
+    height: 50px;
+    width: 0vw;
+    margin-left: 15vw;
+    margin-bottom: 15px;
+/*
+    -webkit-animation-name: slideInRight;
+    animation-name: slideInRight;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+   -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+*/
+}
+.title.name {
+    display:  inline-block;
+    line-height: 40px;
+    background-color: black;
+    color:white;
+    width: 20%;
+}
+.title.name p {
+    margin-top: 0px;
+    padding-right: 18%;
+}
+.title.name.sideBut {
+    width: 10%;
+    border-right: 1px solid white;
+    margin-left: -5%;
+    height: 52px;
+    margin-top: -1px;
+
+}
+.title.name.sideBut:hover, .title.name.sideBut:focus {
+    color: orange;
+    border-right: 1px solid orange;
+    cursor: pointer;
+
+}
+
+.title.price {
+    display: inline-block;
+    line-height: 40px;
+    background-color: dimgray;
+    color:white;
+    width: 25%;
+}
+.title.price.hour {
+    width: 15%;
+}
+.title.name.go {
+    width: 14.5%;
+}
+.title.price.colum {
+    display: inline-block;
+    line-height: 40px;
+    background-color: transparent;
+    color:white;
+    width: 25%;
+}
+.catSecCol {
+    width: 20%;
+    line-height: 30px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: lightgray;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: lightgray;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: lightgray;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: lightgray;
+}

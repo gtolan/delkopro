@@ -1,0 +1,1 @@
+function onLoadFullPage(){loadSlider();showPageBottom();mainPageText();loadResults();}

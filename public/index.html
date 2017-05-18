@@ -1,0 +1,420 @@
+<html lang="en">
+<head>
+
+<title>
+DelkoPro: Your home delivery service comparison tool.Compare hot-meal, grocery, fashion and  even electronics delivery services. We show you all of the available offers and information together, allowing you to make a quick informed decision.
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Delivery Compare: See delivery prices and offers from JustEat, Deliveroo, Tesco, Amazon and many more. Find all the latest information and promotions from food, drinks, fashion and even electronics delivery services. Filter your options to see the best service for you, by speed, category, price and availability. Vote for your favourite home delivery service. Recieve notifications about new offers and promtions and delivery services available to you. Delkopro is your information authority for making home delivery decisions" />
+<meta name="keywords" content="Delivery Compare, delivery, compare, comparison of home delivery, meal delivery comparison London, best delivery service in London, deliveroo, justeat, delivery, offers, delivery offers, promtions delivery, farfetch, shutl, maplin, asda, amazon, grocery, hot-food, drinks, asos, best delivery service, instant delivery, one-hour delivery, next-day delivery, compare grocery delivery services,home delivery price information london" />
+   
+    
+<meta name="robots" content="index, follow"/>
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />    
+<meta name="google-site-verification" content="_NLqOSBKatTLWxuATMsDp4p2pm1ASjR8ZVglN5_Tgxk" />
+<!--  SW device shortcut for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="DelkoPro">
+<meta name="apple-mobile-web-app-status-bar-style" content="#303F9F">
+<link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+<!-- Add to homescreen for Chrome on Android -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="application-name" content="DelkoPro">
+<meta name="theme-color" content="#303F9F">
+<meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+<meta name="msapplication-TileColor" content="#2F3BA2">    
+<link rel="icon" href="/images/favicon.ico">
+<link rel="stylesheet" href="styles/render.css">
+<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="styles/menuStyle.css" >
+<!-- Tile icon for Win8 -->
+<meta name="msapplication-TileColor" content="#3372DF">
+<meta name="msapplication-navbutton-color" content="#303F9F">  
+<link rel="manifest" href="/manifest.json">   
+
+<script type="application/ld+json">  
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "name": "DelkoPro",
+  "alternateName": "Delivery Compare",
+  "url": "https://www.delkopro.co.uk"
+}
+</script>
+<script type="application/ld+json">      
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "https://www.delkopro.co.uk",
+  "logo": "https://www.delkopro.co.uk/images/logoDeliveryCompare.png"
+}
+</script>     
+ 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74197368-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD9qyUlxvZS1jCX7qP-jMRT1HC12gGO23Y",
+    authDomain: "delkoprouk.firebaseapp.com",
+    databaseURL: "https://delkoprouk.firebaseio.com",
+    storageBucket: "delkoprouk.appspot.com",
+    messagingSenderId: "993422261436"
+  };
+  firebase.initializeApp(config);
+</script>    
+
+</head>
+ 
+<body onload="onLoadFullPage()">
+
+<!-- Top Nav -->
+<ul class="topnav" id="myTopnav">
+  <li id="drawerBtn">
+      <a class="active" href="#home">
+          <div class="mainMenuIcon" id="mainIcon">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+          </div>
+      </a>
+    </li>
+    <li class="centerLogo">
+    DelkoPro
+    </li>
+    <div id="iconToolSpeed"></div>
+    <div id="iconToolCat"></div>
+    <li class="rightNav">
+        D
+    </li>
+</ul>
+
+<div class="snackbar" id="snackbarSuccessLog">
+</div>
+<!-- The SideNav -->
+<nav id="mySidenav" class="sidenav">
+      <a href="#" id="homeLink" name="spatranLink">Home</a>
+      <a href="#" id="promoLink" name="spatranLink">Offers and Promotions</a>
+      <a href="#" id="voteLink" name="spatranLink">Vote</a>
+      <a href="#" id="notifLink">Notifications</a>
+      <a href="#" id="contactLink" name="spatranLink">Contact</a> 
+      <a href="#" id="aboutLink" name="spatranLink">About</a>
+      <a href="#" id="blogLink" name="spatranLink">Blog</a>
+      <select id="locationSelect">
+          <option value="London" selected>London</option>
+          <option value="Barcelona">Barcelona</option>
+          <option value="Madrid" disabled>Madrid</option>
+          <option value="London" disabled>Paris</option>
+          <option value="London" disabled>Berlin</option>
+          <option value="London" disabled>Dublin</option>
+      </select>   
+    <div class="location"><img class="locationIcon" src="/images/locationIcon.png" alt="select your location image"></div>
+
+      <a href="#" id="termsLink" class="termsConditions" name="spatranLink">Terms of Services</a>
+</nav>
+
+   
+ 
+<!--- Main Page content ---->
+<div class="mainPage" id="main">
+  
+<div class="slideshow-container" id="mainSliderContainer">
+    <div class="myslides fade">
+        <div class="numberText">1/5</div>
+        <div class="headerDiv">
+            <h1 class="headerText">Inline slider</h1>
+        </div>
+        <img style="width:100%;height:300px" src="images/ubereatsSlider.png">
+        <a href="https://www.ubereats.com/london/" target="_blank" class="sliderText">UberEats</a>
+    </div>   
+
+</div>
+      <br>
+        <a class="prev" onclick="minusSlides(1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div style="text-align:center">
+          <span class="dot" value="1" onclick="currentSlide(1)"></span> 
+          <span class="dot" value="2" onclick="currentSlide(2)" ></span> 
+          <span class="dot" value="3" onclick="currentSlide(3)"></span>
+          <span class="dot" value="4" onclick="currentSlide(4)" ></span>
+          <span class="dot" value="5" onclick="currentSlide(5)" ></span>
+        </div>
+    
+
+    
+    
+<div class="pageBottom" id="pageBottom">
+    
+<div class="choosePage" id="choosePage">  
+<div class="tabContainer center midSizeTab" id="tabContainer">
+    <div>
+      <a href="#" class="tablinks active" id="speedTab">Delivery Speed</a>
+      <a href="#" class="tablinks"  id="typeTab">Delivery Type</a>
+      <a href="#" class="tablinks" id="resultTab">Results</a>
+    </div>
+</div>
+            
+            <div id="SPEED" class="tabcontent tabcConactive">
+                 <div class="speedContainer" id="speedContainer"> 
+                          <div class="speed instantSpeed" id="instantSpeed">
+                            <img class="insantSpeedImg" src="/images/transp.png">
+                            <h4 class="infoSpeedText" id="speedInfoTextOne">INSTANT</h4>
+                          </div>
+                         <div class="speed sameDaySpeed" id="sameDaySpeed">
+                            <img class="sameDaySpeedImg" src="/images/transp.png">
+                            <h4 class="infoSpeedText" id="speedInfoTextTwo">SAME DAY</h4>
+                          </div>
+                        <div class="speed sameWeekSpeed" id="sameWeekSpeed">
+                            <img class="sameWeekSpeedImg" src="/images/transp.png">
+                            <h4 class="infoSpeedText" id="speedInfoTextThree">SAME WEEK</h4>
+                          </div>
+                        <div class="speed anyTimeSpeed" id="anyTimeSpeed">
+                            <img class="anyTimeSpeedImg" src="/images/transp.png">
+                            <h4 class="infoSpeedText" id="speedInfoTextFour">ANY TIME</h4>
+                          </div>
+                </div>
+            </div>
+
+    
+            <div id="TYPE" class="tabcontent">
+              <ul class="categoryList">
+                <li class="category hotFood categorytip" id="hotFood">
+                  </li> 
+                <li class="category postal categorytip" id="postal">
+                  </li>  
+                <li class="category electronics categorytip" id="electronics" >
+                  </li>  
+                <li class="category grocery categorytip" id="grocery">
+                  </li>  
+                <li class="category fashion categorytip" id="fashion">
+                  </li>  
+                <li class="category drinks ripple categorytip" id="drinks">
+                  </li>  
+              </ul>
+            </div>
+
+    
+            <div id="RESULT" class="tabcontent">    
+                
+            <div class="info titleBar mobile" id="infoTitleBar">
+                    <div class="title name sideBut dropbtn" onclick="myDropFunction()" id="tableSideTriangle">
+                          &bigtriangledown; 
+                        </div>
+                     <div class="title name" id="tableServiceName">
+                      <p>Service Name</p>  
+                      </div>
+                     <div class="title price" id="tableServicePrice">
+                      Price
+                      </div>
+                     <div class="title name" id="tableServiceCategory">
+                      Categories
+                      </div>
+                     <div class="title price hour" id="tableServiceTime">
+                      Hours
+                      </div>
+                     <div class="title name go" id="tableLetsGo">
+                      Lets Go!
+                      </div>
+                    </div> 
+
+              <ul class="serviceList mobile" id="serviceListSec" >
+                    
+              </ul>
+                <div id="listdropSec"></div> 
+                <div id="binRightSec"></div> 
+            </div>
+   </div> 
+
+    
+    
+<div class="blogPage" id="blogSection">
+    
+    </div>
+    
+<div class="contactPage" id="contactPage" >  
+    <h2 class="pageTitle Contact" id="contactPageHeader" ></h2>
+    <div class="pageContent contactForm" >
+            <div id="contactFormImages"></div>
+        <div class=" tab" id="tabMesg">
+            <button class="tablink contact active" id="login">Contact Form</button>
+<!--            <button class="tablink contact" id="signUp">Sign Up</button>-->
+            <button class="tablink contact" id="anon">Tell us anonymously!</button>
+        </div>
+        <div class="tabMesgContent active" id="Login">
+            <div class=" container-login-form">
+                <form id="loginForm" name="loginForm">
+                    <div class="imgcontainer"></div>
+                    <div id="emailLoginSection">
+                        <label id="loginLabelEmail"><b>Email</b>
+                        </label> 
+                        <input autocomplete="email" id="emailLogin" name="uname" placeholder="Email" required="" type="text"> 
+                        <label id="loginLabelPassword"><b>Subject</b></label> 
+                        <input autocomplete="name" id="messageLogsubject" name="messageLogsubject" placeholder="Subject" required="" type="text">
+                    </div>
+                    <div id=" messageLoginSection">
+                        <label><b>Message</b></label> 
+                        <textarea id="messageLoggedIn" name="messageFromUser" placeholder="Enter your message here..." required="" rows="4"></textarea>
+                    </div>
+                
+                    <button class="submitModalcontact sendUserMessage" id="sendUserMessageButton" type="button">
+                    Send Message</button>
+                </form>
+<!--                <button class="submitModalcontact googleButton" id="googleAuthButLogin">Google Auth</button>-->
+            </div>
+        </div>
+
+        <div class="tabMesgContent" id="Anon">
+            <div class="container-login-form">
+                <form id="anonForm" name="anonForm">
+                    <div id="messageAnonSection">
+                        <label><b>Message</b></label> 
+                        <textarea id="messageAnon" name="messageFromUser" placeholder="Enter your message here..." rows=" 4"></textarea>
+                    </div>
+                    <button class="submitModalcontact" id="anonMessageBut" type="submit">Get anonymous key &#128275;</button>
+                    <button class="submitModalcontact sendAnonMessage" id="sendAnonMessageBut" type="submit">
+                    Send message </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="contactPage" id ="promoPage" >
+<!--    <h2 class="pageTitle Contact" id="promoPageHeader"></h2>-->
+    <input type="text" class="blogSearch" placeholder="search">
+    <div class="pageContent promoSection" id="promoSectionRep">
+    <img class="loader" style="position:absolute;width:150px;height:100px;left:calc(50vw - 75px);" src="images/loader.gif">
+    </div>
+</div>
+    
+<div class="contactPage" id ="aboutPage" >
+</div>
+    
+<div class="contactPage profilePage" id ="profilesPage" >
+    
+</div>
+   
+<!-- The Notification Modal -->
+<div id="myNoteModal" class="modal">
+      <!-- Modal content -->
+    </div>
+    
+    
+<div class="contactPage terms" id ="termsPage">
+   <h4 class="pageTitle Contact" id="termsPageHeader">  </h4>
+             <div class="pageContent termsSection">
+             <div class="terms pageInfo" id="pageInfoAbout">
+                <button class="accordion" id="sectionOneTerms"></button>
+                <div class="panel" value="1">
+                </div>
+                <button class="accordion" id="sectionTwoTerms"></button>
+                <div class="panel" value="2">
+                </div>
+                <button class="accordion" id="sectionThreeTerms"></button>
+                <div class="panel" value="3">
+                </div>
+                <button class="accordion" id="sectionFourTerms"></button>
+                <div class="panel" value="4">
+                </div>
+                <button class="accordion" id="sectionFiveTerms"></button>
+                <div class="panel" value="5">
+                </div>
+                <button class="accordion" id="sectionSixTerms"></button>
+                <div class="panel" value="6">
+                </div>
+                <button class="accordion" id="sectionSevenTerms"></button>
+                <div class="panel" value="7">
+                </div>
+                <button class="accordion" id="sectionEightTerms"></button>
+                <div class="panel" value="8">
+                </div>
+                <button class="accordion" id="sectionNineTerms"></button>
+                <div class="panel" value="9">
+                </div>
+                <button class="accordion" id="sectionElevenTerms"></button>
+                <div class="panel" value="11">
+                </div>
+                <button class="accordion" id="sectionTwelveTerms"></button>
+                <div class="panel" value="12">
+                </div>
+                <button class="accordion" id="sectionThirteenTerms"></button>
+                <div class="panel" value="13">
+                </div>
+                <button class="accordion" id="sectionFourteenTerms"></button>
+                <div class="panel" value="14">
+                </div>
+                <button class="accordion" id="sectionFifteenTerms"></button>
+                <div class="panel" value="15">
+                </div>
+                <button class="accordion" id="sectionSixteenTerms"></button>
+                <div class="panel" value="16">
+                 </div>
+                <button class="accordion" id="sectionSeventeenTerms"></button>
+                <div class="panel" value="17">
+                </div>
+                <button class="accordion" id="sectionEighteenTerms"></button>
+                <div class="panel" value="18">
+                </div>
+                <button class="accordion" id="sectionNineteenTerms"></button>
+                <div class="panel" value="19">
+                </div>
+                <button class="accordion" id="sectionTwentyTerms"></button>
+                <div class="panel" value="20">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<!--</div>-->
+<div class="footer" id="footer">
+<div class="footerTop">
+    <div class="notes" id="footerTopBar">
+        <a href="#" id="promoIcon"><img class="noteIcon" src="images/offersIcon.png"></a>
+        <a href="#" id="voteIcon"><img class="noteIcon" src="images/voteIcon.png"></a>
+        <a href="#" id="notificationsIcon"><img class="noteIcon" src="images/notificationIcon.png"></a>
+        <a href="#" id="contactIcon"><img class="noteIcon" src="images/messageIcon.png"></a>
+        <a href="#" id="aboutIcon"><img class="noteIcon" src="images/aboutIcon.png"></a>
+        <a href="#" id="blogIcon"><img class="noteIcon" src="images/blogIcon.png"></a>
+        <a href="#" id="openIcons"><img class="openIcon" src="images/dotmenu.png"></a>
+
+
+    </div>
+</div>  
+<div class="footerBottom">
+    <img class="socialIcon" src="/images/twitter.png" alt="twitter social media delivery compare delkopro">
+    <img class="socialIcon" src="/images/googlePlus.png" alt="google plus social media delivery compare delkopro">
+    <img class="socialIcon" src="/images/fbook.png" alt="facebook social media delivery compare delkopro">
+</div> 
+<div class="footbottom">Delivery Compare 2017</div>
+</div>
+</div>
+    
+<!--<img class="construction" src="images/construction.png">     id="contactLinkFooter"id="offersLinkFooter"   -->
+</div> <!-- page bottom end-->
+    
+<script src="/scripts/JS/app.js" ></script>
+<script src="/scripts/JS/time.js" ></script>
+<script src="/scripts/JS/translate.js"></script>
+<script src="/scripts/JS/spa.js" ></script>
+<script src="/scripts/JS/onLoad.js" ></script>
+<script src="/scripts/JS/loadSlider.js" ></script>
+<script src="/scripts/JS/loadResults.js" ></script>
+<script src="/scripts/JS/messagingAuth.js"></script>
+    
+</body>
+</html>

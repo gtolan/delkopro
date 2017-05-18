@@ -1,0 +1,325 @@
+class="topnav" id="myTopnav"
+id="drawerBtn"
+"active"
+class="mainMenuIcon" id="mainIcon"
+ class="centerLogo "
+ "rightNav"
+ class="snackbar" id="snackbarSuccessLog"
+ 
+ id="mySidenav" class="sidenav"
+ id="homeLink"
+ id="promoLink"
+ id="voteLink"
+ id="notifLink"
+ id="contactLink"
+ id="aboutLink"
+ id="blogLink"
+ id="locationSelect"
+ class="location"
+ <img class="locationIcon" src="/images/locationIcon.png" alt="select your location image">
+ id="termsLink" class="termsConditions"
+ 
+ 
+ //main page is none//
+ then...
+ 
+ 
+ 
+     <li class=" topRightIcon resetIcon" id="resetOptButton">
+<!--        <img class="currentSpeedImg" alt="reset button for compare delivery services" src="images/whiteIconReset.png">-->
+    </li>
+    <li class="topRightIcon currentType currenttooltip">
+        <span class="tooltiptext" id="currentTypeTool">Current Type</span>
+<!--        <img class="currentTypeImg" alt="Compare delivery category icon" src="images/transp.png" id="currentTypeIcon">-->
+    </li>
+    <li class="topRightIcon currentSpeed currenttooltip">
+        <span class="tooltiptext" id="currentSpeedTool">Current Speed</span>
+<!--        <img class="currentSpeedImg" alt="Compare delivery speed icon" src="images/transp.png" id="currentSpeedIcon">-->
+    </li>    
+
+
+
+
+
+
+
+
+<h2 class="pageTitle Contact" id="contactPageHeader"></h2>
+    <div class="pageContent contactForm">
+        <img src="/images/contactIcon.png" alt="Contact delkopro mail icon" class="contIcon">
+        <img src="/images/logoutIcon.png" alt="logout of delkopro icon" class="logoutIcon" id="logOutButton">
+        <img src="/images/logoutIconAnon.png" alt="logout of delkopro anonymous icon" class="logoutIconAnon" id="buttonAnonIcon">
+        <img src="/images/loggedInGoogle.png" alt="google auth login icon" class="logoutIconAnon" id="googleSignedIn">
+        <div class="tab" id="tabMesg">
+  <button class="tablink contact active" id="login">Login</button>
+  <button class="tablink contact" id="signUp">Sign Up</button>
+  <button class="tablink contact" id="anon">Anonymous</button>
+</div>
+
+<div id="LogIn" class="tabMesgContent active">
+<div class="container-login-form"> 
+  <form id="loginForm">
+  <div class="imgcontainer">
+  </div>
+  
+      <div id="emailLoginSection">
+            <label id="loginLabelEmail"><b>Email</b></label>
+            <input type="text" placeholder="Email" name="uname" autocomplete="email" required id="emailLogin">
+
+            <label id="loginLabelPassword"><b>Password</b></label>
+            <input type="password" placeholder="Enter password" name="psw" autocomplete="name" required id="passLogin">
+      </div>
+      <div id="messageLoginSection">
+            <label><b>Message</b></label>
+          <textarea  rows="4" type="text" placeholder="Enter your message here..." name="messageFromUser"  required id="messageLoggedIn"></textarea>
+      </div>
+            <button type="button" class="submitModalcontact" id="loginBut">Login</button>
+        
+            <button type="button" class="submitModalcontact sendUserMessage" id="sendUserMessageButton">
+      </button>
+</form>
+    <button class="submitModalcontact googleButton" id="googleAuthButLogin">Google Auth</button>
+     </div>
+</div>
+
+<div id="SignUp" class="tabMesgContent">
+<div class="container-login-form"> 
+      <form id="signUpForm">
+      <div class="imgcontainer">
+      </div>
+
+
+        <label><b>Email</b></label>
+        <input type="text" placeholder="Email" name="uname" id="newUserEmail" autocomplete="email" required>
+        <label id="signUpPassword"><b>Password</b></label>
+        <input type="password" placeholder="Enter password" name="psw" id="newUserPwd" autocomplete="name" required>
+        <button type="submit" class="submitModalcontact" id="signUpSubmit">Sign Up</button>
+
+
+        </form>
+    <button class="submitModalcontact googleButton" id="googleAuthButSignUp">Google Auth</button>
+     </div>
+</div>
+        
+<div id="Anon" class="tabMesgContent">
+   <div class="container-login-form">
+       <form id="anonForm">
+      <div id="messageAnonSection">
+            <label><b>Message</b></label>
+          <textarea  rows="4" type="text" placeholder="Enter your message here..." name="messageFromUser"   id="messageAnon"></textarea>
+      </div>
+    <button type="submit" class="submitModalcontact" id="anonMessageBut"></button>
+    <button type="submit" class="submitModalcontact sendAnonMessage" id="sendAnonMessageBut"></button>
+       </form>
+  </div> 
+</div>
+
+    </div>
+
+
+
+
+
+
+
+///////////////
+
+
+
+     <div class="blogPost" id="blogPostContainer">
+        <li class="serviceBlog delkoProBlogIcon blogIcon"><img class="delkoLogoImgage" src="images/icons/delkoLogo.png"></li>
+<!--        <img class="blogIcon" src="images/deliverooMiniLogo.png" id="blogIcon">-->
+        <img class="blogImageMain delkoProPost" src="images/deliverOO.png" id="blogImage">
+        <h1 class="blogDate" id="blogDate">26/3/17</h1>
+        <h1 class="blogHeader" id="blogHeader">DelkoPro is Delivery Compare</h1>
+        <h4 class="blogMainText" id="blogText">This is a recent blog post shared by deliveroo and re shared by delkopro</h4>
+        <a href="" class="linkBlog" id="linkBlog">View more</a>
+        <h4 class="blogKeyWords" id="blogKeywords"> Deliveroo, New Services, Offers, London</h4>
+    </div>
+    
+    
+    <div class="blogPost" id="blogPostContainer">
+        <img class="blogIcon" src="images/deliverooMiniLogo.png" id="blogIcon">
+        <img class="blogImageMain" src="images/deliverOO.png" id="blogImage">
+        <h1 class="blogDate" id="blogDate">26/3/17</h1>
+        <h1 class="blogHeader" id="blogHeader">10 of the most ordered Deliveroo dishes in London</h1>
+        <h4 class="blogMainText" id="blogText">We've all got our Deliveroo favourites. Whether your go-to is a chorizo-topped pizza from that Neapolitan joint at the end of your road, or you just can't resist wagamama's Chilli Squid delivered to your desk, there's always that one dish that's sure to make your day.<br><br>
+        Gourmet burgers were the favourite food delivery of Deliveroo customers last year, with Mexican and Japanese menu items notching up some of the most orders across the UK.</h4>
+        <a href="https://foodscene.deliveroo.co.uk/food-trends/london-hot-new-restaurants-2016.html" class="linkBlog" id="linkBlog">View more</a>
+        <h4 class="blogKeyWords" id="blogKeywords"> Deliveroo, Most Popular Dishes, Meal Ideas, London</h4>
+    </div>
+    
+         <div class="blogPost" id="blogPostContainer">
+        <li class="service justEat blogIcon"><img class="delkoLogoImgage" src="images/justEatLogo.png"></li>
+<!--        <img class="blogIcon" src="images/deliverooMiniLogo.png" id="blogIcon">-->
+        <img class="blogImageMain delkoProPost" src="images/deliveryBot.jpg" id="blogImage">
+        <h1 class="blogDate" id="blogDate">16/7/16</h1>
+        <h1 class="blogHeader" id="blogHeader">Delivery bots – coming to a street near you</h1>
+        <h4 class="blogMainText" id="blogText">We’ve all been there – you’ve ordered takeaway, the doorbell rings, and you suddenly realise you’re five-episodes into a Netflix binge, still sat in your pjs and totally unprepared for human contact.
+
+What do you do? Grab your pizza and avoid all eye contact? Hide behind the door frame hoping the delivery driver won’t notice that you’ve just rolled out of bed? Well no more – we’re eliminating those awkward encounters and introducing delivery bots. No, really.</h4>
+        <a href="https://www.just-eat.co.uk/blog/delivery-bots/" class="linkBlog" id="linkBlog">View more</a>
+        <h4 class="blogKeyWords" id="blogKeywords"> Just Eat, Delivery Robot, New last mile delivery, London</h4>
+    </div>
+    
+             <div class="blogPost" id="blogPostContainer">
+        <li class="service delkoProBlogIcon blogIcon"><img class="delkoLogoImgage" src="images/icons/delkoLogo.png"></li>
+<!--        <img class="blogIcon" src="images/deliverooMiniLogo.png" id="blogIcon">-->
+        <img class="blogImageMain delkoProPost" src="images/deliverOO.png" id="blogImage">
+        <h1 class="blogDate" id="blogDate">26/3/17</h1>
+        <h1 class="blogHeader" id="blogHeader">DelkoPro Blog Header and Date</h1>
+        <h4 class="blogMainText" id="blogText">This is a recent blog post shared by deliveroo and re shared by delkopro</h4>
+        <a href="" class="linkBlog" id="linkBlog">View more</a>
+        <h4 class="blogKeyWords" id="blogKeywords"> Deliveroo, New Services, Offers, London</h4>
+    </div>
+    
+
+
+
+
+
+
+
+
+//////contact again
+
+
+
+<h2 class="pageTitle Contact" id="contactPageHeader"></h2>
+    <div class="pageContent contactForm">
+        <img src="/images/contactIcon.png" alt="Contact delkopro mail icon" class="contIcon">
+        <img src="/images/logoutIcon.png" alt="logout of delkopro icon" class="logoutIcon" id="logOutButton">
+        <img src="/images/logoutIconAnon.png" alt="logout of delkopro anonymous icon" class="logoutIconAnon" id="buttonAnonIcon">
+        <img src="/images/loggedInGoogle.png" alt="google auth login icon" class="logoutIconAnon" id="googleSignedIn">
+        <div class="tab" id="tabMesg">
+  <button class="tablink contact active" id="login">Login</button>
+  <button class="tablink contact" id="signUp">Sign Up</button>
+  <button class="tablink contact" id="anon">Anonymous</button>
+</div>
+
+<div id="LogIn" class="tabMesgContent active">
+<div class="container-login-form"> 
+  <form id="loginForm">
+  <div class="imgcontainer">
+  </div>
+  
+      <div id="emailLoginSection">
+            <label id="loginLabelEmail"><b>Email</b></label>
+            <input type="text" placeholder="Email" name="uname" autocomplete="email" required id="emailLogin">
+
+            <label id="loginLabelPassword"><b>Password</b></label>
+            <input type="password" placeholder="Enter password" name="psw" autocomplete="name" required id="passLogin">
+      </div>
+      <div id="messageLoginSection">
+            <label><b>Message</b></label>
+          <textarea  rows="4" type="text" placeholder="Enter your message here..." name="messageFromUser"  required id="messageLoggedIn"></textarea>
+      </div>
+            <button type="button" class="submitModalcontact" id="loginBut">Login</button>
+        
+            <button type="button" class="submitModalcontact sendUserMessage" id="sendUserMessageButton">
+      </button>
+</form>
+    <button class="submitModalcontact googleButton" id="googleAuthButLogin">Google Auth</button>
+     </div>
+</div>
+
+<div id="SignUp" class="tabMesgContent">
+<div class="container-login-form"> 
+      <form id="signUpForm">
+      <div class="imgcontainer">
+      </div>
+
+
+        <label><b>Email</b></label>
+        <input type="text" placeholder="Email" name="uname" id="newUserEmail" autocomplete="email" required>
+        <label id="signUpPassword"><b>Password</b></label>
+        <input type="password" placeholder="Enter password" name="psw" id="newUserPwd" autocomplete="name" required>
+        <button type="submit" class="submitModalcontact" id="signUpSubmit">Sign Up</button>
+
+
+        </form>
+    <button class="submitModalcontact googleButton" id="googleAuthButSignUp">Google Auth</button>
+     </div>
+</div>
+        
+<div id="Anon" class="tabMesgContent">
+   <div class="container-login-form">
+       <form id="anonForm">
+      <div id="messageAnonSection">
+            <label><b>Message</b></label>
+          <textarea  rows="4" type="text" placeholder="Enter your message here..." name="messageFromUser"   id="messageAnon"></textarea>
+      </div>
+    <button type="submit" class="submitModalcontact" id="anonMessageBut"></button>
+    <button type="submit" class="submitModalcontact sendAnonMessage" id="sendAnonMessageBut"></button>
+       </form>
+  </div> 
+</div>
+
+    </div>
+
+
+
+
+
+//////about page
+//    <div class="pageContent aboutSection">
+////    <div class="threeAdditives">
+////        <img class="speedAdd" src="/images/stats.png" id="speedAdd" alt="delivery speed icon">
+////        <img class="categAdd" src="/images/stopwatch.png" id="categAdd" alt="delivery timing icon">
+////        <img class="ideaAdd" src="/images/resultChip.png" id="ideaAdd" alt="delivery service ideas icon">
+////    </div>
+//    <div class="resultAdditives">
+//        <img class="resultAdd One" src="/images/ideaIcon.png" id="resultAddOne" alt="delivery service results icon">
+//        <img class="resultAdd Two" src="/images/cashIcon.png" id="resultAddTwo" alt="delivery service rewards result icon">
+//        <img class="resultAdd Three" src="/images/adviceIcon.png" id="resultAddThree" alt="delivery service advice result icon">
+//        
+//    </div>
+//    <div class="grindMac">
+//        <img class="grindIcon machineShake" src="/images/grinder.png" id="machgrind" alt="filter comparison delivery services app">    
+//    </div>
+//        <div class="about pageInfo" id="pageInfoAbout">
+//
+//            </div>
+//    </div>
+//}
+
+
+   <h2 class="pageTitle Contact" id="aboutPageHeader"></h2>
+    <div class="pageContent aboutSection">
+    <div class="threeAdditives">
+        <img class="speedAdd" src="/images/stats.png" id="speedAdd" alt="delivery speed icon">
+        <img class="categAdd" src="/images/stopwatch.png" id="categAdd" alt="delivery timing icon">
+        <img class="ideaAdd" src="/images/resultChip.png" id="ideaAdd" alt="delivery service ideas icon">
+    </div>
+    <div class="resultAdditives">
+        <img class="resultAdd One" src="/images/ideaIcon.png" id="resultAddOne" alt="delivery service results icon">
+        <img class="resultAdd Two" src="/images/cashIcon.png" id="resultAddTwo" alt="delivery service rewards result icon">
+        <img class="resultAdd Three" src="/images/adviceIcon.png" id="resultAddThree" alt="delivery service advice result icon">
+    </div>
+    <div class="grindMac">
+        <img class="grindIcon machineShake" src="/images/grinder.png" id="machgrind" alt="filter comparison delivery services app">    
+    </div>
+    <div class="about pageInfo" id="pageInfoAbout">
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    
+</body>
+</html>

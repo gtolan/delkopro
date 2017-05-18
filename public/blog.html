@@ -1,0 +1,233 @@
+blogPosts = {
+delkoPro : {
+logo: "images/icons/delkoLogo.png";
+blogImage: "images/deliverOO.png";
+blogHeader: "DelkoPro is Delivery Compare";
+blogText: "This is a recent blog post shared by deliveroo and re shared by delkopro";
+blogDAte: "26/3/17";
+linkBlog: "delkopro.co.uk";
+linkText: "delkopro.co.uk";
+keywords: "Deliveroo, New Services, Offers, London";
+},
+deliveroo: {
+logo: "images/deliverooMiniLogo.png";
+blogImage: "images/deliverOO.png";
+blogHeader: "DelkoPro is Delivery Compare";
+blogText: "This is a recent blog post shared by deliveroo and re shared by delkopro";
+blogDAte: "26/3/17";
+linkBlog: "delkopro.co.uk";
+linkText: "delkopro.co.uk";
+keywords: "Deliveroo, New Services, Offers, London";
+},
+justEat: {
+logo: "images/justEatLogo.png";
+blogImage: "images/deliveryBot.jpg";
+blogHeader: "Delivery bots – coming to a street near you";
+blogText: "We’ve all been there – you’ve ordered takeaway, the doorbell rings, and you suddenly realise you’re five-episodes into a Netflix binge, still sat in your pjs and totally unprepared for human contact.
+
+What do you do? Grab your pizza and avoid all eye contact? Hide behind the door frame hoping the delivery driver won’t notice that you’ve just rolled out of bed? Well no more – we’re eliminating those awkward encounters and introducing delivery bots. No, really.";
+blogDAte: "16/7/16";
+linkBlog: "https://www.just-eat.co.uk/blog/delivery-bots/";
+linkText: "Just Eat";
+keywords: "Just Eat, Delivery Robot, New last mile delivery, London";
+}
+}
+var blogPost = document.createElement('Div');
+    blogPost.id = 'blogPostContainer';
+    blogPage.appendChild(blogPost);
+var icon = document.createElement('LI');
+    icon.classList.add('serviceBlog', 'delkoProIcon', 'blogIcon');
+    blogPost.appendChild(icon);
+var logoImg = document.createElement('IMG');
+    logoImg.src = LOGO;
+    blogPost.appendChild(logoImg);
+var blogImg = document.creteElemnet('IMG');
+    blogImg.id = "blogImage";
+    blogImg.classList.add('blogImageMain', 'delkoProPost');
+    blogImg.src = BLOGIMG;
+    blogPost.appendChild(blogImg);
+var date = document.createElement('H1');
+    date.classList.add('blogDate');
+    date.id = "blogDate";
+    date.innerHTML = BLOGDATE;
+var blogHeader = document.createElement('H1');
+    blogHeader.id = "blogHeader";
+    blogHeader.innerHTML = BLOGHEADEETEXT;
+    blogHeader.classList.add('blogHeader');
+var blogText = document.createElement('H4');
+    blogText.id = "blogText";
+    blogText.classList.add('blogMainText');
+    blogText = MAINBLOGTEXT;
+var link = document.createElement('A');
+    link.id = "linkBlog";
+    link.src = BLOGLINK;
+    link.innerHTML = LINKTEXT;
+var keywords = document.createElement('H4');
+    keywords.classList.add('blogKeyWords');
+    keywords.id = "blogKeywords";
+    keywords.innerHTML = KEYWORDS;
+
+
+         <div class="blogPost" id="blogPostContainer">
+        <li class="service justEat blogIcon"><img class="delkoLogoImgage" src=""></li>
+<!--        <img class="blogIcon" src="images/deliverooMiniLogo.png" id="blogIcon">-->
+        <img class="blogImageMain delkoProPost" src="" id="blogImage">
+        <h1 class="blogDate" id="blogDate"></h1>
+        <h1 class="blogHeader" id="blogHeader"></h1>
+        <h4 class="blogMainText" id="blogText"></h4>
+        <a href="" class="linkBlog" id="linkBlog">View more</a>
+        <h4 class="blogKeyWords" id="blogKeywords"> </h4>
+    </div>
+
+
+<div class="blogPost" id="blogPostContainer">
+        <li class="serviceBlog delkoProBlogIcon blogIcon"><img class="delkoLogoImgage" src=""></li>
+<!--        <img class="blogIcon" src="images/deliverooMiniLogo.png" id="blogIcon">-->
+        <img class="blogImageMain delkoProPost" src="" id="blogImage">
+        <h1 class="blogDate" id="blogDate">26/3/17</h1>
+        <h1 class="blogHeader" id="blogHeader"></h1>
+        <h4 class="blogMainText" id="blogText"></h4>
+        <a href="" class="linkBlog" id="linkBlog">View more</a>
+        <h4 class="blogKeyWords" id="blogKeywords"> </h4>
+    </div>
+    
+
+
+    
+    <div class="blogPost" id="blogPostContainer">
+        <img class="blogIcon" src="" id="blogIcon">
+        <img class="blogImageMain" src="" id="blogImage">
+        <h1 class="blogDate" id="blogDate">26/3/17</h1>
+        <h1 class="blogHeader" id="blogHeader">10 of the most ordered Deliveroo dishes in London</h1>
+        <h4 class="blogMainText" id="blogText">We've all got our Deliveroo favourites. Whether your go-to is a chorizo-topped pizza from that Neapolitan joint at the end of your road, or you just can't resist wagamama's Chilli Squid delivered to your desk, there's always that one dish that's sure to make your day.<br><br>
+        Gourmet burgers were the favourite food delivery of Deliveroo customers last year, with Mexican and Japanese menu items notching up some of the most orders across the UK.</h4>
+        <a href="https://foodscene.deliveroo.co.uk/food-trends/london-hot-new-restaurants-2016.html" class="linkBlog" id="linkBlog">View more</a>
+        <h4 class="blogKeyWords" id="blogKeywords"> Deliveroo, Most Popular Dishes, Meal Ideas, London</h4>
+    </div>
+    
+
+    
+             <div class="blogPost" id="blogPostContainer">
+        <li class="service delkoProBlogIcon blogIcon"><img class="delkoLogoImgage" src="images/icons/delkoLogo.png"></li>
+<!--        <img class="blogIcon" src="images/deliverooMiniLogo.png" id="blogIcon">-->
+        <img class="blogImageMain delkoProPost" src="images/deliverOO.png" id="blogImage">
+        <h1 class="blogDate" id="blogDate">26/3/17</h1>
+        <h1 class="blogHeader" id="blogHeader">DelkoPro Blog Header and Date</h1>
+        <h4 class="blogMainText" id="blogText">This is a recent blog post shared by deliveroo and re shared by delkopro</h4>
+        <a href="" class="linkBlog" id="linkBlog">View more</a>
+        <h4 class="blogKeyWords" id="blogKeywords"> Deliveroo, New Services, Offers, London</h4>
+    </div>
+    
+
+
+
+
+
+<!-- The Notification Modal -->
+<div id="myNoteModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+            <div class="modal-header" id="myModalHeader">
+              <span class="close" id="closeNote">&times;</span>
+              Notifications
+            </div>
+        
+            <div class="modal-body"><div id="notificationModalText">
+                <div class="coingSoonText">Coming Soon</div>
+            <div class="cominSoonMain">
+              <div class="loginForNotifications" id="notifcationLoginSection">
+          <button class="submitModalcontact googleButton" id="googleAuthBut">Verify with Google<img src="/images/gmailicon.png" class="gmailicon"> </button>
+          <button class="submitModalcontact googleButton" id="emailAuthButNotifications">Verify with  Email Login</button>
+        </div>
+                <div id="emailLoginSectionNofications">
+                    <form id="emailNotifForm">
+                    <label id="loginLabelEmail"><b>Email</b></label>
+                    <input type="text" placeholder="Email" name="uname" autocomplete="email" required id="emailLogin">
+
+                    <label id="loginLabelPassword"><b>Password</b></label>
+                    <input type="password" placeholder="Enter password" name="psw" autocomplete="name" required id="passLogin">
+                    
+                    <button type="button" class="submitModalcontact" id="notifLoginBut">Login</button>
+                </form>
+                </div>    
+                
+            <div class="toggleSubscriptionsButton" id="toggleSubscriptionsButton">
+                <button class="submitModalcontact googleButton" id="promptSubscriptions">Prompt Subscriptions</button>
+            </div>
+            <div class="toggleSubscriptions" id="toggleSubscriptions">
+            <br><p>
+                Your device has been registered for notifications
+            </p>
+                    <label class="switch">
+                      <input type="checkbox" id="notifSwitch">
+                      <div class="slider round"></div>
+                    </label>    
+            </div>
+            </div>
+                </div>
+    </div>
+            <div class="modal-footer">
+                <button id="noteCloseModal">Close</button>
+           
+      
+</div>
+</div>
+    </div>
+
+///JS notifi
+
+
+noteClose.onclick = function() {
+	notemodal.style.display = "none";
+}
+noteCloseModal.onclick = function() {
+    notemodal.style.display = "none";
+}
+window.onclick = function(event) {
+		if (event.target == notemodal) {
+			notemodal.style.display = "none";
+		}
+	}
+
+appDC.notifSwitch.addEventListener('change', notifcationSubscibe);
+
+function notifcationSubscibe() {
+ 
+
+
+
+
+appDC.resetOptButton.addEventListener('click', reset);
+
+
+///////top nav
+
+
+
+
+
+
+
+
+///old vote count
+
+//Run Vote Results
+function runVoteScore() {
+	if (appDC.resultTab.innerHTML === "VOTE") {
+		var lis = appDC.serviceListSec.getElementsByClassName('service', 'servicetip', 'vote');
+		appDC.serviceListSec.classList.add('vote');
+		appDC.infoTitleBar.style.opacity = 0;
+		var x;
+		for (x = 0; x < lis.length; x++) {
+			lis[x].classList.add('vote');
+			lis[x].children[0].classList.add('vote');
+		}
+		var li, i;
+		li = document.getElementsByClassName('service', 'servicetip', 'amazon', 'vote');
+		var data = [];
+		var data = [3, 4, 1, 6, 9, 3, 12, 4, 3, 6, 10, 9, 6, 5, 12];
+		for (i = 0; i < li.length; i++) {
+			li[i].style.paddingRight = data[i] + 'em';
+		}
+	}
+}
